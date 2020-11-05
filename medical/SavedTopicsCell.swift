@@ -8,8 +8,12 @@
 
 import UIKit
 
-class SavedTopics: UITableViewCell {
+class SavedTopicsCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

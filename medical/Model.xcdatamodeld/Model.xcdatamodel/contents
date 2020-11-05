@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Question" representedClassName=".Question" syncable="YES">
-        <attribute name="community" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="question" inverseEntity="Topic" syncable="YES"/>
+        <attribute name="community" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="question" attributeType="String" syncable="YES"/>
+        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="questions" inverseEntity="Topic" syncable="YES"/>
     </entity>
     <entity name="SaveTopics" representedClassName=".SaveTopics" syncable="YES">
         <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" syncable="YES"/>
         <relationship name="username" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="saveTopics" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Topic" representedClassName=".Topic" syncable="YES">
-        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="topic" inverseEntity="Question" syncable="YES"/>
+        <attribute name="topic" attributeType="String" syncable="YES"/>
+        <relationship name="questions" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Question" inverseName="topic" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
-        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="saveTopics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SaveTopics" inverseName="username" inverseEntity="SaveTopics" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+        <relationship name="saveTopics" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="SaveTopics" inverseName="username" inverseEntity="SaveTopics" syncable="YES"/>
     </entity>
     <elements>
         <element name="Question" positionX="-45" positionY="36" width="128" height="90"/>

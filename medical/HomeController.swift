@@ -8,9 +8,13 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var topics: [Topic] = []
     
     @IBOutlet weak var searchField: UITextField!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,29 @@ class HomeController: UIViewController {
         bottomLine.backgroundColor = UIColor.black.cgColor
         searchField.borderStyle = UITextField.BorderStyle.none
         searchField.layer.addSublayer(bottomLine)
+        
+        self.tableView.register(SavedTopicsCell.self, forCellReuseIdentifier: "topics")
+        
+        
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return topics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "topics", for: indexPath) as? SavedTopicsCell  else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        
+        let topic = topics[indexPath.row]
+        
+//        cell.title?.text = topic.topic
+//        cell.detailTextLabel = topic.question
+        return cell
+    }
+    
+    
+    
     
 }

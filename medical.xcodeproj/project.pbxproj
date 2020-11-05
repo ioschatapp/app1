@@ -25,7 +25,7 @@
 		BA90FCFC2553D1D9005D7334 /* Topic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF42553D1D9005D7334 /* Topic+CoreDataProperties.swift */; };
 		BA90FCFD2553D1D9005D7334 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF52553D1D9005D7334 /* User+CoreDataClass.swift */; };
 		BA90FCFE2553D1D9005D7334 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF62553D1D9005D7334 /* User+CoreDataProperties.swift */; };
-		BA90FD012553D5CC005D7334 /* SavedTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FD002553D5CC005D7334 /* SavedTopics.swift */; };
+		BA90FD012553D5CC005D7334 /* SavedTopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FD002553D5CC005D7334 /* SavedTopicsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 		BA90FCF42553D1D9005D7334 /* Topic+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Topic+CoreDataProperties.swift"; path = "model/Topic+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA90FCF52553D1D9005D7334 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "model/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA90FCF62553D1D9005D7334 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "model/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA90FD002553D5CC005D7334 /* SavedTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTopics.swift; sourceTree = "<group>"; };
+		BA90FD002553D5CC005D7334 /* SavedTopicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTopicsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 				BA8EE7362552DF650072FEA6 /* OptionsController.swift */,
 				BA8EE7382552DF860072FEA6 /* TopicsController.swift */,
 				BA8EE73A2552E55E0072FEA6 /* Model.xcdatamodeld */,
-				BA90FD002553D5CC005D7334 /* SavedTopics.swift */,
+				BA90FD002553D5CC005D7334 /* SavedTopicsCell.swift */,
 			);
 			path = medical;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA79508225516E2700B19B10 /* ViewController.swift in Sources */,
-				BA90FD012553D5CC005D7334 /* SavedTopics.swift in Sources */,
+				BA90FD012553D5CC005D7334 /* SavedTopicsCell.swift in Sources */,
 				BA79508025516E2700B19B10 /* AppDelegate.swift in Sources */,
 				BA8EE73C2552E55E0072FEA6 /* Model.xcdatamodeld in Sources */,
 				BA90FCFB2553D1D9005D7334 /* Topic+CoreDataClass.swift in Sources */,
