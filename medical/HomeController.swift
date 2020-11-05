@@ -17,7 +17,7 @@ class HomeController: UIViewController {
         
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: searchField.frame.height - 1, width: searchField.frame.width, height: 1.0)
-        bottomLine.backgroundColor = UIColor.white.cgColor
+        bottomLine.backgroundColor = UIColor.black.cgColor
         searchField.borderStyle = UITextField.BorderStyle.none
         searchField.layer.addSublayer(bottomLine)
     }
