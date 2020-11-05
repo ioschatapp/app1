@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var topics: [Topic] = []
+    var topics: [SaveTopics] = []
     
     @IBOutlet weak var searchField: UITextField!
     
@@ -27,7 +28,15 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.tableView.register(SavedTopicsCell.self, forCellReuseIdentifier: "topics")
         
-        
+        let topicRequest: NSFetchRequest<SaveTopics> = SaveTopics.fetchRequest()
+        let delegate = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        do {
+            topics = try (delegate?.fetch(topicRequest))!
+            print(topics)
+            tableView.reloadData()
+        } catch {
+            print("Fetch failed")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +49,8 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         let topic = topics[indexPath.row]
-        
+        cell.titleLabel.text = topic.topic?.topic
+        cell.questionLabel.text = String(topic.topic!.questions?.count ?? 0) + " saved"
 //        cell.title?.text = topic.topic
 //        cell.detailTextLabel = topic.question
         return cell
