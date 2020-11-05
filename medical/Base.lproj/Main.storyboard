@@ -220,7 +220,7 @@
         <!--OPTIONS-->
         <scene sceneID="emB-Gg-IyO">
             <objects>
-                <viewController id="ICa-OI-D2l" sceneMemberID="viewController">
+                <viewController id="ICa-OI-D2l" customClass="OptionsController" customModule="medical" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1mm-Ax-nxu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,18 +265,50 @@
         <!--HOME-->
         <scene sceneID="9xH-Mk-wxE">
             <objects>
-                <viewController id="rOA-C6-BRF" sceneMemberID="viewController">
+                <viewController id="rOA-C6-BRF" customClass="HomeController" customModule="medical" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hPJ-e4-cCW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2k-0n-PIz">
+                                <rect key="frame" x="26" y="44" width="363" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNv-N2-gvo">
+                                        <rect key="frame" x="16" y="73" width="330" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAVED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-oZ-ffa">
+                                        <rect key="frame" x="70" y="8" width="99" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOPICS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-Yl-aZK">
+                                        <rect key="frame" x="177" y="8" width="116" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a0n-Eb-EPp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="HOME" id="WE1-5v-0I6"/>
+                    <connections>
+                        <outlet property="searchField" destination="jNv-N2-gvo" id="1DI-9f-Bx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8e-tS-fDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2477" y="-457"/>
+            <point key="canvasLocation" x="2476.811594202899" y="-457.36607142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pjk-UZ-2pq">
@@ -288,9 +320,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rOA-C6-BRF" kind="relationship" relationship="viewControllers" id="YSa-LZ-GcS"/>
-                        <segue destination="l1X-jU-hif" kind="relationship" relationship="viewControllers" id="skg-3U-3vU"/>
-                        <segue destination="ICa-OI-D2l" kind="relationship" relationship="viewControllers" id="B2b-eH-td0"/>
+                        <segue destination="rOA-C6-BRF" kind="relationship" relationship="viewControllers" id="eQ7-Aa-kqN"/>
+                        <segue destination="l1X-jU-hif" kind="relationship" relationship="viewControllers" id="mqB-pb-Rts"/>
+                        <segue destination="ICa-OI-D2l" kind="relationship" relationship="viewControllers" id="VLQ-aA-xq5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHf-o7-9Gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,7 +332,7 @@
         <!--TOPICS-->
         <scene sceneID="oin-tH-cOo">
             <objects>
-                <viewController id="l1X-jU-hif" sceneMemberID="viewController">
+                <viewController id="l1X-jU-hif" customClass="TopicController" customModule="medical" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZwK-ki-C6N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,14 +17,14 @@
 		BA8EE7372552DF650072FEA6 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE7362552DF650072FEA6 /* OptionsController.swift */; };
 		BA8EE7392552DF860072FEA6 /* TopicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE7382552DF860072FEA6 /* TopicsController.swift */; };
 		BA8EE73C2552E55E0072FEA6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE73A2552E55E0072FEA6 /* Model.xcdatamodeld */; };
-		BA8EE74525530C340072FEA6 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE73D25530C340072FEA6 /* User+CoreDataClass.swift */; };
-		BA8EE74625530C340072FEA6 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE73E25530C340072FEA6 /* User+CoreDataProperties.swift */; };
-		BA8EE74725530C340072FEA6 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE73F25530C340072FEA6 /* Question+CoreDataClass.swift */; };
-		BA8EE74825530C340072FEA6 /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE74025530C340072FEA6 /* Question+CoreDataProperties.swift */; };
-		BA8EE74925530C340072FEA6 /* SaveTopics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE74125530C340072FEA6 /* SaveTopics+CoreDataClass.swift */; };
-		BA8EE74A25530C340072FEA6 /* SaveTopics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE74225530C340072FEA6 /* SaveTopics+CoreDataProperties.swift */; };
-		BA8EE74B25530C340072FEA6 /* Topic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE74325530C340072FEA6 /* Topic+CoreDataClass.swift */; };
-		BA8EE74C25530C340072FEA6 /* Topic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8EE74425530C340072FEA6 /* Topic+CoreDataProperties.swift */; };
+		BA90FCF72553D1D9005D7334 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCEF2553D1D9005D7334 /* Question+CoreDataClass.swift */; };
+		BA90FCF82553D1D9005D7334 /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF02553D1D9005D7334 /* Question+CoreDataProperties.swift */; };
+		BA90FCF92553D1D9005D7334 /* SaveTopics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF12553D1D9005D7334 /* SaveTopics+CoreDataClass.swift */; };
+		BA90FCFA2553D1D9005D7334 /* SaveTopics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF22553D1D9005D7334 /* SaveTopics+CoreDataProperties.swift */; };
+		BA90FCFB2553D1D9005D7334 /* Topic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF32553D1D9005D7334 /* Topic+CoreDataClass.swift */; };
+		BA90FCFC2553D1D9005D7334 /* Topic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF42553D1D9005D7334 /* Topic+CoreDataProperties.swift */; };
+		BA90FCFD2553D1D9005D7334 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF52553D1D9005D7334 /* User+CoreDataClass.swift */; };
+		BA90FCFE2553D1D9005D7334 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90FCF62553D1D9005D7334 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +40,14 @@
 		BA8EE7362552DF650072FEA6 /* OptionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		BA8EE7382552DF860072FEA6 /* TopicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
 		BA8EE73B2552E55E0072FEA6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		BA8EE73D25530C340072FEA6 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA8EE73E25530C340072FEA6 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA8EE73F25530C340072FEA6 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA8EE74025530C340072FEA6 /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA8EE74125530C340072FEA6 /* SaveTopics+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveTopics+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA8EE74225530C340072FEA6 /* SaveTopics+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveTopics+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA8EE74325530C340072FEA6 /* Topic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Topic+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA8EE74425530C340072FEA6 /* Topic+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Topic+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA90FCEF2553D1D9005D7334 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Question+CoreDataClass.swift"; path = "model/Question+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA90FCF02553D1D9005D7334 /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Question+CoreDataProperties.swift"; path = "model/Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA90FCF12553D1D9005D7334 /* SaveTopics+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SaveTopics+CoreDataClass.swift"; path = "model/SaveTopics+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA90FCF22553D1D9005D7334 /* SaveTopics+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SaveTopics+CoreDataProperties.swift"; path = "model/SaveTopics+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA90FCF32553D1D9005D7334 /* Topic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Topic+CoreDataClass.swift"; path = "model/Topic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA90FCF42553D1D9005D7334 /* Topic+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Topic+CoreDataProperties.swift"; path = "model/Topic+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA90FCF52553D1D9005D7334 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "model/User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA90FCF62553D1D9005D7334 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "model/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +64,14 @@
 		BA79507325516E2700B19B10 = {
 			isa = PBXGroup;
 			children = (
-				BA8EE73D25530C340072FEA6 /* User+CoreDataClass.swift */,
-				BA8EE73E25530C340072FEA6 /* User+CoreDataProperties.swift */,
-				BA8EE73F25530C340072FEA6 /* Question+CoreDataClass.swift */,
-				BA8EE74025530C340072FEA6 /* Question+CoreDataProperties.swift */,
-				BA8EE74125530C340072FEA6 /* SaveTopics+CoreDataClass.swift */,
-				BA8EE74225530C340072FEA6 /* SaveTopics+CoreDataProperties.swift */,
-				BA8EE74325530C340072FEA6 /* Topic+CoreDataClass.swift */,
-				BA8EE74425530C340072FEA6 /* Topic+CoreDataProperties.swift */,
+				BA90FCEF2553D1D9005D7334 /* Question+CoreDataClass.swift */,
+				BA90FCF02553D1D9005D7334 /* Question+CoreDataProperties.swift */,
+				BA90FCF12553D1D9005D7334 /* SaveTopics+CoreDataClass.swift */,
+				BA90FCF22553D1D9005D7334 /* SaveTopics+CoreDataProperties.swift */,
+				BA90FCF32553D1D9005D7334 /* Topic+CoreDataClass.swift */,
+				BA90FCF42553D1D9005D7334 /* Topic+CoreDataProperties.swift */,
+				BA90FCF52553D1D9005D7334 /* User+CoreDataClass.swift */,
+				BA90FCF62553D1D9005D7334 /* User+CoreDataProperties.swift */,
 				BA79507E25516E2700B19B10 /* medical */,
 				BA79507D25516E2700B19B10 /* Products */,
 			);
@@ -177,18 +177,18 @@
 				BA79508225516E2700B19B10 /* ViewController.swift in Sources */,
 				BA79508025516E2700B19B10 /* AppDelegate.swift in Sources */,
 				BA8EE73C2552E55E0072FEA6 /* Model.xcdatamodeld in Sources */,
-				BA8EE74B25530C340072FEA6 /* Topic+CoreDataClass.swift in Sources */,
+				BA90FCFB2553D1D9005D7334 /* Topic+CoreDataClass.swift in Sources */,
+				BA90FCF72553D1D9005D7334 /* Question+CoreDataClass.swift in Sources */,
+				BA90FCFA2553D1D9005D7334 /* SaveTopics+CoreDataProperties.swift in Sources */,
+				BA90FCFD2553D1D9005D7334 /* User+CoreDataClass.swift in Sources */,
+				BA90FCF92553D1D9005D7334 /* SaveTopics+CoreDataClass.swift in Sources */,
+				BA90FCFE2553D1D9005D7334 /* User+CoreDataProperties.swift in Sources */,
+				BA90FCF82553D1D9005D7334 /* Question+CoreDataProperties.swift in Sources */,
+				BA90FCFC2553D1D9005D7334 /* Topic+CoreDataProperties.swift in Sources */,
 				BA8EE7332552D6B40072FEA6 /* GuessController.swift in Sources */,
 				BA8EE7372552DF650072FEA6 /* OptionsController.swift in Sources */,
-				BA8EE74825530C340072FEA6 /* Question+CoreDataProperties.swift in Sources */,
 				BA8EE7352552DF320072FEA6 /* HomeController.swift in Sources */,
-				BA8EE74525530C340072FEA6 /* User+CoreDataClass.swift in Sources */,
-				BA8EE74C25530C340072FEA6 /* Topic+CoreDataProperties.swift in Sources */,
 				BA8EE7392552DF860072FEA6 /* TopicsController.swift in Sources */,
-				BA8EE74625530C340072FEA6 /* User+CoreDataProperties.swift in Sources */,
-				BA8EE74925530C340072FEA6 /* SaveTopics+CoreDataClass.swift in Sources */,
-				BA8EE74725530C340072FEA6 /* Question+CoreDataClass.swift in Sources */,
-				BA8EE74A25530C340072FEA6 /* SaveTopics+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

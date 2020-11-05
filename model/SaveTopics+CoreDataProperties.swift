@@ -2,7 +2,7 @@
 //  SaveTopics+CoreDataProperties.swift
 //  medical
 //
-//  Created by Y YM on 2020/11/2.
+//  Created by Y YM on 2020/11/5.
 //  Copyright © 2020 edu. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@ extension SaveTopics {
         return NSFetchRequest<SaveTopics>(entityName: "SaveTopics")
     }
 
-    @NSManaged public var username: User?
     @NSManaged public var topic: Topic?
+    @NSManaged public var username: User?
 
 }

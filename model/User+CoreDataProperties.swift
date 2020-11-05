@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  medical
 //
-//  Created by Y YM on 2020/10/31.
+//  Created by Y YM on 2020/11/5.
 //  Copyright © 2020 edu. All rights reserved.
 //
 //
@@ -17,7 +17,8 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var username: String?
     @NSManaged public var password: String?
+    @NSManaged public var username: String?
+    @NSManaged public var saveTopics: SaveTopics?
 
 }
