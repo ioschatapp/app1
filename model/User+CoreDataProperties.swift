@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  medical
 //
-//  Created by Y YM on 2020/11/5.
+//  Created by Y YM on 2020/11/7.
 //  Copyright © 2020 edu. All rights reserved.
 //
 //

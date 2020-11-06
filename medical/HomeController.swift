@@ -19,6 +19,7 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: searchField.frame.height - 1, width: searchField.frame.width, height: 1.0)
@@ -44,19 +45,21 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "topics", for: indexPath) as? SavedTopicsCell  else {
+        let CellIdentifier: String = "topics"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "topics", for: indexPath) as? UITableViewCell  else {
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
         }
         
         let topic = topics[indexPath.row]
-        cell.titleLabel.text = topic.topic?.topic
-        cell.questionLabel.text = String(topic.topic!.questions?.count ?? 0) + " saved"
-//        cell.title?.text = topic.topic
-//        cell.detailTextLabel = topic.question
+        
+        cell.textLabel?.text = topic.topic?.topic
+
         return cell
     }
     
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
 }

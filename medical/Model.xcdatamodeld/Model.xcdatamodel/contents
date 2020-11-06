@@ -5,6 +5,11 @@
         <attribute name="question" attributeType="String" syncable="YES"/>
         <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="questions" inverseEntity="Topic" syncable="YES"/>
     </entity>
+    <entity name="SaveQuestion" representedClassName=".SaveQuestion" syncable="YES">
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" syncable="YES"/>
+    </entity>
     <entity name="SaveTopics" representedClassName=".SaveTopics" syncable="YES">
         <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" syncable="YES"/>
         <relationship name="username" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="saveTopics" inverseEntity="User" syncable="YES"/>
@@ -23,5 +28,6 @@
         <element name="SaveTopics" positionX="-54" positionY="9" width="128" height="75"/>
         <element name="Topic" positionX="-36" positionY="45" width="128" height="75"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="SaveQuestion" positionX="-45" positionY="36" width="128" height="90"/>
     </elements>
 </model>
