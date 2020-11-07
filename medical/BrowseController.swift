@@ -177,7 +177,9 @@ class BrowseController: UIViewController, Action {
     }
     
     func showQuestion() {
-        print(questionContent)
+        if questionContent == nil {
+            return
+        }
         if self.topic!.questions!.count == 0 {
             questionContent.textColor = .red
             questionContent.text = "No Question In Add. Use add to load"

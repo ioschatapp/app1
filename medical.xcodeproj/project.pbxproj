@@ -34,6 +34,7 @@
 		BABB2D4E25557FE5001EBAED /* SaveQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB2D4C25557FE5001EBAED /* SaveQuestion+CoreDataProperties.swift */; };
 		BABB2D502555A5C8001EBAED /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB2D4F2555A5C8001EBAED /* Global.swift */; };
 		BABB2D522555BFD3001EBAED /* SaveQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB2D512555BFD3001EBAED /* SaveQuestionCell.swift */; };
+		BABB2D542556736C001EBAED /* SaveTopicFavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB2D532556736C001EBAED /* SaveTopicFavCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		BABB2D4C25557FE5001EBAED /* SaveQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SaveQuestion+CoreDataProperties.swift"; path = "model/SaveQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BABB2D4F2555A5C8001EBAED /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		BABB2D512555BFD3001EBAED /* SaveQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuestionCell.swift; sourceTree = "<group>"; };
+		BABB2D532556736C001EBAED /* SaveTopicFavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SaveTopicFavCell.swift; path = model/SaveTopicFavCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				BABB2D4925557AA3001EBAED /* BrowseController.swift */,
 				BABB2D4F2555A5C8001EBAED /* Global.swift */,
 				BABB2D512555BFD3001EBAED /* SaveQuestionCell.swift */,
+				BABB2D532556736C001EBAED /* SaveTopicFavCell.swift */,
 			);
 			path = medical;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				BA90FCFA2553D1D9005D7334 /* SaveTopics+CoreDataProperties.swift in Sources */,
 				BA90FCFD2553D1D9005D7334 /* User+CoreDataClass.swift in Sources */,
 				BA90FCF92553D1D9005D7334 /* SaveTopics+CoreDataClass.swift in Sources */,
+				BABB2D542556736C001EBAED /* SaveTopicFavCell.swift in Sources */,
 				BABB2D4A25557AA3001EBAED /* BrowseController.swift in Sources */,
 				BA90FCFE2553D1D9005D7334 /* User+CoreDataProperties.swift in Sources */,
 				BA90FCF82553D1D9005D7334 /* Question+CoreDataProperties.swift in Sources */,

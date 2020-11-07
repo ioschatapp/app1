@@ -85,7 +85,7 @@ class TopicController: UIViewController,  UITableViewDataSource, UITableViewDele
         self.present(alert, animated: true, completion: nil)
     }
     
-    var savedTopics: [Topic] = []
+    var savedTopics: [SaveTopics] = []
     
     var allTopics: [Topic] = []
     
@@ -101,7 +101,6 @@ class TopicController: UIViewController,  UITableViewDataSource, UITableViewDele
         self.searchBar.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "topics")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -150,11 +149,14 @@ class TopicController: UIViewController,  UITableViewDataSource, UITableViewDele
     func fetchSavedTopics() {
         let topicRequest: NSFetchRequest<SaveTopics> = SaveTopics.fetchRequest()
         let delegate = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        let predicate = NSPredicate(format: "username = %@", Global.USER_INFO!.username!)
+        topicRequest.predicate = predicate
         do {
-            savedTopics = (try (delegate?.fetch(topicRequest)) ?? []).compactMap { $0.topic }
+            savedTopics = (try (delegate?.fetch(topicRequest)) ?? [])
         } catch {
             print("Fetch failed")
         }
+        
     }
     
     func setupButton() {
@@ -186,25 +188,29 @@ class TopicController: UIViewController,  UITableViewDataSource, UITableViewDele
         let detailsView = self.storyboard?.instantiateViewController(withIdentifier: "topicDetailsController") as! TopicDetailsController
 
         detailsView.setTopic(topic: filterTopic[indexPath.row])
-//        self.present(detailsView, animated: true)
         self.navigationController!.pushViewController(detailsView, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "topics", for: indexPath)
-        if cell.detailTextLabel == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "topics")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "topics", for: indexPath) as! SavedTopicsCell
+        
         let topic = filterTopic[indexPath.row]
-        cell.textLabel?.textColor = UIColor.black
-        for x in savedTopics {
-            if x.topic == topic.topic {
-                cell.textLabel?.textColor = UIColor.red
+        cell.isLike.isOn = false
+        cell.topic.text = topic.topic
+        cell.questionNum.text = String(topic.questions?.count ?? 0) + " saved"
+        cell.rawTopic = topic
+        for i in savedTopics {
+            if i.topic!.objectID == topic.objectID {
+                cell.isLike.isOn = true
+                cell.setTopic(i)
                 break
             }
         }
-        cell.textLabel?.text = topic.topic
-        cell.detailTextLabel?.text = String(topic.questions?.count ?? 0) + " saved"
+        
+        
+        cell.callback = {
+            self.fetchData()
+        }
         return cell
     }
     
@@ -212,6 +218,13 @@ class TopicController: UIViewController,  UITableViewDataSource, UITableViewDele
         let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in alert.dismiss(animated: true)}))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        allTopics = []
+        filterTopic = []
+        tableView.reloadData()
     }
     
     

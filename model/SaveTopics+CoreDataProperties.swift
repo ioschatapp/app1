@@ -17,7 +17,7 @@ extension SaveTopics {
         return NSFetchRequest<SaveTopics>(entityName: "SaveTopics")
     }
 
+    @NSManaged public var username: String?
     @NSManaged public var topic: Topic?
-    @NSManaged public var username: User?
 
 }

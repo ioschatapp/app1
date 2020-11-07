@@ -1,14 +1,14 @@
 //
-//  SAVED_TOPICS.swift
+//  SaveTopicFavCell.swift
 //  medical
 //
-//  Created by Y YM on 2020/11/5.
+//  Created by Y YM on 2020/11/7.
 //  Copyright © 2020 edu. All rights reserved.
 //
 
 import UIKit
 
-class SavedTopicsCell: UITableViewCell {
+class SaveTopicFavCell: UITableViewCell {
 
     @IBOutlet weak var topic: UILabel!
     @IBOutlet weak var isLike: UISwitch!
@@ -36,7 +36,7 @@ class SavedTopicsCell: UITableViewCell {
             let ques = SaveTopics(context: managedContext)
             ques.topic = rawTopic!
             ques.username = Global.USER_INFO!.username
-           
+            
             managedContext.insert(ques)
         }
         do {
@@ -44,7 +44,7 @@ class SavedTopicsCell: UITableViewCell {
         }catch {
             print("Save Failed")
         }
-         callback()
+        callback()
     }
     
 }
