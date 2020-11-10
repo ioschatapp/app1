@@ -36,6 +36,7 @@ class ViewController: UIViewController {
             if allUser.count > 0 {
                 Global.USER_INFO = allUser[0]
                 let guessView = self.storyboard?.instantiateViewController(withIdentifier: "guessController") as!   GuessController
+                guessView.modalPresentationStyle = .fullScreen
                 self.present(guessView, animated: true)
             } else {
                 toast(msg: "Error username or password")
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onNewAccount(_ sender: Any) {
-        let alert = UIAlertController(title: "CREAT TOPIC", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "CREAT ACCONT", message: nil, preferredStyle: .alert)
         
         
         //2. Add the text field. You can configure it however you need.
@@ -119,6 +120,7 @@ class ViewController: UIViewController {
             allUser = try (delegate.fetch(userRequest))
             Global.USER_INFO = allUser[0]
             let guessView = self.storyboard?.instantiateViewController(withIdentifier: "guessController") as! GuessController
+            guessView.modalPresentationStyle = .fullScreen
             self.present(guessView, animated: true)
         } catch {
             print("Fetch failed")

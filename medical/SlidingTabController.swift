@@ -42,19 +42,24 @@ class UISimpleSlidingTabController: UIViewController {
     }
     
     func setCurrentPosition(position: Int){
+        print("Set Current " + String(position))
         currentPosition = position
         let path = IndexPath(item: currentPosition, section: 0)
         
-        DispatchQueue.main.async {
+        // DispatchQueue.main.async {
             if self.tabStyle == .flexible {
                 self.collectionHeader.scrollToItem(at: path, at: .centeredHorizontally, animated: true)
             }
             self.collectionHeader.reloadData()
-        }
+        // }
         
-        DispatchQueue.main.async {
-            self.collectionPage.scrollToItem(at: path, at: .centeredHorizontally, animated: true)
-        }
+         DispatchQueue.main.async {
+            self.collectionPage.collectionViewLayout.invalidateLayout()
+            self.collectionPage.scrollToItem(at: path, at: .centeredHorizontally, animated: false)
+            self.collectionPage.setNeedsLayout()
+            self.collectionPage.collectionViewLayout.invalidateLayout()
+            self.collectionHeader.reloadData()
+         }
     }
     
     func setStyle(style: SlidingTabStyle){
@@ -74,6 +79,7 @@ class UISimpleSlidingTabController: UIViewController {
         view.addSubview(collectionHeader)
         view.addSubview(collectionPage)
         // collectionHeader
+        collectionPage.contentInsetAdjustmentBehavior = .never
         collectionHeader.translatesAutoresizingMaskIntoConstraints = false
         collectionHeader.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         collectionHeader.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -167,8 +173,10 @@ extension UISimpleSlidingTabController: UICollectionViewDelegate{
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == collectionPage{
             let currentIndex = Int(self.collectionPage.contentOffset.x / collectionPage.frame.size.width)
+            print("Scroll Position: " + String(currentIndex))
             setCurrentPosition(position: currentIndex)
         }
+        print("Scroll: " + String(scrollView == collectionPage))
     }
 }
 
@@ -198,8 +206,8 @@ extension UISimpleSlidingTabController: UICollectionViewDataSource{
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionPageIdentifier, for: indexPath)
+        print("CollView: " + String(indexPath.row))
         let vc = items[indexPath.row]
-        
         cell.addSubview(vc.view)
         
         vc.view.translatesAutoresizingMaskIntoConstraints = false
@@ -217,13 +225,13 @@ extension UISimpleSlidingTabController: UICollectionViewDelegateFlowLayout{
         if collectionView == collectionHeader {
             if tabStyle == .fixed {
                 let spacer = CGFloat(titles.count)
-                return CGSize(width: view.frame.width / spacer, height: CGFloat(heightHeader))
+                return CGSize(width: view.frame.width / spacer, height: CGFloat(heightHeader) - 1)
             }else{
-                return CGSize(width: view.frame.width * 20 / 100, height: CGFloat(heightHeader))
+                return CGSize(width: view.frame.width * 20 / 100, height: CGFloat(heightHeader) - 1)
             }
         }
         
-        return CGSize(width: view.frame.width, height: view.frame.height)
+        return CGSize(width: view.frame.width, height: view.frame.height - 57)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

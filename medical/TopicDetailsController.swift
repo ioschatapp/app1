@@ -52,7 +52,7 @@ class TopicDetailsController: UISimpleSlidingTabController {
         setHeaderActiveColor(color: .orange)
         setHeaderInActiveColor(color: .black)
         setHeaderBackgroundColor(color: .white)
-        setStyle(style: .fixed)
+        setStyle(style: .flexible)
         build()
     }
     

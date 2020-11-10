@@ -70,6 +70,9 @@ class BrowseController: UIViewController, Action {
             ques.community = false
 
             self.topic!.addToQuestions(ques)
+            if self.topic?.questions?.count == 1 {
+                self.showQuestion()
+            }
             do {
                 try managedContext.save()
                 print("saved")
